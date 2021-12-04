@@ -4,35 +4,34 @@ let action = prompt ("Enter the mathematical action (+, -, * or /)", "");
 let result = 1;
 
 if (action === '+') {
- result = getSum();
+ result = getSum(firstNum, secondNum);
 } 
     else if (action === '-') {
-    result = getDif();
+    result = getDif(firstNum, secondNum);
     } 
         else if (action === '*') {
-        result = getProduct();
+        result = getProduct(firstNum, secondNum);
         } 
            else if (action === '/') {
-            result = getQoutient();
+            result = getQoutient(firstNum, secondNum);
             } 
 
-function getSum() {
-    return firstNum + secondNum;
+function getSum(first, second) {
+    return first + second;
     };
 
-function getDif() {
-    return firstNum - secondNum;
+function getDif(first, second) {
+    return first - second;
     };
 
-function getProduct() {
-    return firstNum * secondNum;
+function getProduct(first, second) {
+    return first * second;
     };
 
-function getQoutient() {
-    return firstNum / secondNum;
+function getQoutient(first, second) {
+    return first / second;
     };
 
 
 console.log(`${firstNum} ${action} ${secondNum} = ${result}`)
 
-// console.log(typeof firstNum, typeof secondNum, typeof result);
